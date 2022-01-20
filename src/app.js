@@ -1,16 +1,14 @@
-function genDomName() {
-  var pronoun = ["el", "nuestro"];
-  var adj = ["buen", "gran"];
-  var noun = ["Claudio", "racoon", "bread", "food"];
-  var domain = ["com", "es", "cl", "net", "org", "io"];
+var pronoun = ["el", "nuestro"];
+var adj = ["buen", "gran"];
+var noun = ["Claudio", "racoon", "bread", "food"];
+var domain = ["com", "es", "cl", "net", "org", "io"];
 
-  let gopronoun = Math.floor(Math.random() * pronoun.length);
-  let goadj = Math.floor(Math.random() * adj.length);
-  let gonoun = Math.floor(Math.random() * noun.length);
-  let godomain = Math.floor(Math.random() * domain.length);
-
-  return (
-    pronoun[gopronoun] + adj[goadj] + noun[gonoun] + "." + domain[godomain]
-  );
+for (let ix = 0; ix < pronoun.length; ix++) {
+  for (let ic = 0; ic < adj.length; ic++) {
+    for (let iv = 0; iv < noun.length; iv++) {
+      for (let ib = 0; ib < domain.length; ib++) {
+        console.log(pronoun[ix]+adj[ic]+noun[iv]+'.'+domain[ib]);
+      }
+    }
+  }
 }
-console.log(genDomName());
