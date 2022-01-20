@@ -1,11 +1,16 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+function genDomName() {
+  var pronoun = ["el", "nuestro"];
+  var adj = ["buen", "gran"];
+  var noun = ["Claudio", "racoon", "bread", "food"];
+  var domain = ["com", "es", "cl", "net", "org", "io"];
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+  let gopronoun = Math.floor(Math.random() * pronoun.length);
+  let goadj = Math.floor(Math.random() * adj.length);
+  let gonoun = Math.floor(Math.random() * noun.length);
+  let godomain = Math.floor(Math.random() * domain.length);
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+  return (
+    pronoun[gopronoun] + adj[goadj] + noun[gonoun] + "." + domain[godomain]
+  );
+}
+console.log(genDomName());
